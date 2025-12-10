@@ -1,517 +1,3 @@
-English — Text-to-Pokémon Generator (concise)
-
-Purpose
-- Minimal local full-stack: React (Vite) frontend + Express (TypeScript) backend. Frontend uses API_BASE = http://localhost:3000.
-
-Quick facts
-- Frontend dev: `npm run dev` (Vite). In Docker the dev server listens on 5173 and is published to host 8080.
-- Backend dev: `npm run dev` (ts-node-dev) on port 3000.
-- Storage: in-memory. Image URLs are generated via pollinations.ai.
-
-Key endpoints
-- GET /health
-- GET /options
-- POST /auth/demo  { username }
-- GET /auth/me
-- POST /auth/logout
-- GET /auth/google, GET /auth/google/callback (if OAuth env vars set)
-- POST /generate-image  { prompt, animals?, abilities? }
-- GET /pokemons
-- DELETE /pokemons/:id
-- POST /share  { pokemonId }
-- GET /share/:shareId
-
-Run (local)
-1) npm (dev)
-```bash
-cd backend
-npm install
-npm run dev
-
-cd ../frontend
-npm install
-npm run dev
-```
-
-2) Docker Compose (recommended)
-```bash
-# from repository root (ex00/)
-make    # builds and starts containers in background
-make logs
-make down
-```
-
-Environment (optional)
-- GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL
-- SESSION_SECRET (defaults to `dev-secret-key` in docker-compose)
-
-Notes
-- Storage is in-memory — restart clears data.
-- Pollinations.ai is used to produce image URLs; no API key in the code.
-
----
-
-Français — Générateur texte → Pokémon (concis)
-
-But
-- Application minimaliste locale : frontend React (Vite) + backend Express (TypeScript). Le frontend utilise API_BASE = http://localhost:3000.
-
-Faits rapides
-- Frontend dev : `npm run dev` (Vite). Dans Docker le serveur dev écoute 5173 et est publié sur le port hôte 8080.
-- Backend dev : `npm run dev` (ts-node-dev) sur le port 3000.
-- Stockage : en mémoire. Les URLs d'images sont générées via pollinations.ai.
-
-Endpoints clés
-- GET /health
-- GET /options
-- POST /auth/demo  { username }
-- GET /auth/me
-- POST /auth/logout
-- GET /auth/google, GET /auth/google/callback (si variables OAuth configurées)
-- POST /generate-image  { prompt, animals?, abilities? }
-- GET /pokemons
-- DELETE /pokemons/:id
-- POST /share  { pokemonId }
-- GET /share/:shareId
-
-Lancer localement
-1) npm (dev)
-```bash
-cd backend
-npm install
-npm run dev
-
-cd ../frontend
-npm install
-npm run dev
-```
-
-2) Docker Compose (recommandé)
-```bash
-# depuis la racine (ex00/)
-make
-make logs
-make down
-```
-
-Variables d'environnement (optionnel)
-- GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL
-- SESSION_SECRET (par défaut `dev-secret-key` dans docker-compose)
-
-Remarques
-- Stockage en mémoire — redémarrage efface les données.
-- Pollinations.ai est utilisé pour générer les URLs d'images ; aucune clé API dans le code.
-English — Text-to-Pokémon Generator (concise)
-
-Purpose
-- Minimal local full-stack: React (Vite) frontend + Express (TypeScript) backend. Frontend uses API_BASE = http://localhost:3000.
-
-Quick facts
-- Frontend dev: `npm run dev` (Vite). In Docker the dev server listens on 5173 and is published to host 8080.
-- Backend dev: `npm run dev` (ts-node-dev) on port 3000.
-- Storage: in-memory. Image URLs are generated via pollinations.ai.
-
-Key endpoints
-- GET /health
-- GET /options
-- POST /auth/demo  { username }
-- GET /auth/me
-- POST /auth/logout
-- GET /auth/google, GET /auth/google/callback (if OAuth env vars set)
-- POST /generate-image  { prompt, animals?, abilities? }
-- GET /pokemons
-- DELETE /pokemons/:id
-- POST /share  { pokemonId }
-- GET /share/:shareId
-
-Run (local)
-1) npm (dev)
-```bash
-cd backend
-npm install
-npm run dev
-
-cd ../frontend
-npm install
-npm run dev
-```
-
-2) Docker Compose (recommended)
-```bash
-# from repository root (ex00/)
-make    # builds and starts containers in background
-make logs
-make down
-```
-
-Environment (optional)
-- GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL
-- SESSION_SECRET (defaults to `dev-secret-key` in docker-compose)
-
-Notes
-- Storage is in-memory — restart clears data.
-- Pollinations.ai is used to produce image URLs; no API key in the code.
-
----
-
-Français — Générateur texte → Pokémon (concis)
-
-But
-- Application minimaliste locale : frontend React (Vite) + backend Express (TypeScript). Le frontend utilise API_BASE = http://localhost:3000.
-
-Faits rapides
-- Frontend dev : `npm run dev` (Vite). Dans Docker le serveur dev écoute 5173 et est publié sur le port hôte 8080.
-- Backend dev : `npm run dev` (ts-node-dev) sur le port 3000.
-- Stockage : en mémoire. Les URLs d'images sont générées via pollinations.ai.
-
-Endpoints clés
-- GET /health
-- GET /options
-- POST /auth/demo  { username }
-- GET /auth/me
-- POST /auth/logout
-- GET /auth/google, GET /auth/google/callback (si variables OAuth configurées)
-- POST /generate-image  { prompt, animals?, abilities? }
-- GET /pokemons
-- DELETE /pokemons/:id
-- POST /share  { pokemonId }
-- GET /share/:shareId
-
-Lancer localement
-1) npm (dev)
-```bash
-cd backend
-npm install
-npm run dev
-
-cd ../frontend
-npm install
-npm run dev
-```
-
-2) Docker Compose (recommandé)
-```bash
-# depuis la racine (ex00/)
-make
-make logs
-make down
-```
-
-Variables d'environnement (optionnel)
-- GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL
-- SESSION_SECRET (par défaut `dev-secret-key` dans docker-compose)
-
-Remarques
-- Stockage en mémoire — redémarrage efface les données.
-- Pollinations.ai est utilisé pour générer les URLs d'images ; aucune clé API dans le code.
-English — Text-to-Pokémon Generator (concise)
-
-Purpose
-- Minimal local full-stack: React (Vite) frontend + Express (TypeScript) backend. Frontend uses API_BASE = http://localhost:3000.
-
-Quick facts
-- Frontend dev: `npm run dev` (Vite). In Docker the dev server listens on 5173 and is published to host 8080.
-- Backend dev: `npm run dev` (ts-node-dev) on port 3000.
-- Storage: in-memory. Image URLs are generated via pollinations.ai.
-
-Key endpoints
-- GET /health
-- GET /options
-- POST /auth/demo  { username }
-- GET /auth/me
-- POST /auth/logout
-- GET /auth/google, GET /auth/google/callback (if OAuth env vars set)
-- POST /generate-image  { prompt, animals?, abilities? }
-- GET /pokemons
-- DELETE /pokemons/:id
-- POST /share  { pokemonId }
-- GET /share/:shareId
-
-Run (local)
-1) npm (dev)
-```bash
-cd backend
-npm install
-npm run dev
-
-cd ../frontend
-npm install
-npm run dev
-```
-
-2) Docker Compose (recommended)
-```bash
-# from repository root (ex00/)
-make    # builds and starts containers in background
-make logs
-make down
-```
-
-Environment (optional)
-- GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL
-- SESSION_SECRET (defaults to `dev-secret-key` in docker-compose)
-
-Notes
-- Storage is in-memory — restart clears data.
-- Pollinations.ai is used to produce image URLs; no API key in the code.
----
-
-Français — Générateur texte → Pokémon (concis)
-
-But
-- Application minimaliste locale : frontend React (Vite) + backend Express (TypeScript). Le frontend utilise API_BASE = http://localhost:3000.
-
-Faits rapides
-- Frontend dev : `npm run dev` (Vite). Dans Docker le serveur dev écoute 5173 et est publié sur le port hôte 8080.
-- Backend dev : `npm run dev` (ts-node-dev) sur le port 3000.
-- Stockage : en mémoire. Les URLs d'images sont générées via pollinations.ai.
-
-Endpoints clés
-- GET /health
-- GET /options
-- POST /auth/demo  { username }
-- GET /auth/me
-- POST /auth/logout
-- GET /auth/google, GET /auth/google/callback (si variables OAuth configurées)
-- POST /generate-image  { prompt, animals?, abilities? }
-- GET /pokemons
-- DELETE /pokemons/:id
-- POST /share  { pokemonId }
-- GET /share/:shareId
-
-Lancer localement
-1) npm (dev)
-```bash
-cd backend
-npm install
-npm run dev
-
-cd ../frontend
-npm install
-npm run dev
-```
-
-2) Docker Compose (recommandé)
-```bash
-# depuis la racine (ex00/)
-make
-make logs
-make down
-```
-
-Variables d'environnement (optionnel)
-- GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL
-- SESSION_SECRET (par défaut `dev-secret-key` dans docker-compose)
-
-Remarques
-- Stockage en mémoire — redémarrage efface les données.
-- Pollinations.ai est utilisé pour générer les URLs d'images ; aucune clé API dans le code.
-English — Text-to-Pokémon Generator (concise)
-
-Purpose
-- Minimal local full-stack: React (Vite) frontend + Express (TypeScript) backend. Frontend uses API_BASE = http://localhost:3000.
-
-Quick facts
-- Frontend dev: `npm run dev` (Vite). In Docker the dev server listens on 5173 and is published to host 8080.
-- Backend dev: `npm run dev` (ts-node-dev) on port 3000.
-- Storage: in-memory. Image URLs are generated via pollinations.ai.
-
-Key endpoints
-- GET /health
-- GET /options
-- POST /auth/demo  { username }
-- GET /auth/me
-- POST /auth/logout
-- GET /auth/google, GET /auth/google/callback (if OAuth env vars set)
-- POST /generate-image  { prompt, animals?, abilities? }
-- GET /pokemons
-- DELETE /pokemons/:id
-- POST /share  { pokemonId }
-- GET /share/:shareId
-
-Run (local)
-1) npm (dev)
-```bash
-cd backend
-npm install
-npm run dev
-
-cd ../frontend
-npm install
-npm run dev
-```
-
-2) Docker Compose (recommended)
-```bash
-# from repository root (ex00/)
-make    # builds and starts containers in background
-make logs
-make down
-```
-
-Environment (optional)
-- GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL
-- SESSION_SECRET (defaults to `dev-secret-key` in docker-compose)
-
-Notes
-- Storage is in-memory — restart clears data.
-- Pollinations.ai is used to produce image URLs; no API key in the code.
-
----
-
-Français — Générateur texte → Pokémon (concis)
-
-But
-- Application minimaliste locale : frontend React (Vite) + backend Express (TypeScript). Le frontend utilise API_BASE = http://localhost:3000.
-
-Faits rapides
-- Frontend dev : `npm run dev` (Vite). Dans Docker le serveur dev écoute 5173 et est publié sur le port hôte 8080.
-- Backend dev : `npm run dev` (ts-node-dev) sur le port 3000.
-- Stockage : en mémoire. Les URLs d'images sont générées via pollinations.ai.
-
-Endpoints clés
-- GET /health
-- GET /options
-- POST /auth/demo  { username }
-- GET /auth/me
-- POST /auth/logout
-- GET /auth/google, GET /auth/google/callback (si variables OAuth configurées)
-- POST /generate-image  { prompt, animals?, abilities? }
-- GET /pokemons
-- DELETE /pokemons/:id
-- POST /share  { pokemonId }
-- GET /share/:shareId
-
-Lancer localement
-1) npm (dev)
-```bash
-cd backend
-npm install
-npm run dev
-
-cd ../frontend
-npm install
-npm run dev
-```
-
-2) Docker Compose (recommandé)
-```bash
-# depuis la racine (ex00/)
-make
-make logs
-make down
-```
-
-Variables d'environnement (optionnel)
-- GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL
-- SESSION_SECRET (par défaut `dev-secret-key` dans docker-compose)
-
-Remarques
-- Stockage en mémoire — redémarrage efface les données.
-- Pollinations.ai est utilisé pour générer les URLs d'images ; aucune clé API dans le code.
-English — Text-to-Pokémon Generator (concise)
-
-Purpose
-- Minimal local full-stack: React (Vite) frontend + Express (TypeScript) backend. Frontend uses API_BASE = http://localhost:3000.
-
-Quick facts
-- Frontend dev: `npm run dev` (Vite). In Docker the dev server listens on 5173 and is published to host 8080.
-- Backend dev: `npm run dev` (ts-node-dev) on port 3000.
-- Storage: in-memory. Image URLs are generated via pollinations.ai.
-
-Key endpoints
-- GET /health
-- GET /options
-- POST /auth/demo  { username }
-- GET /auth/me
-- POST /auth/logout
-- GET /auth/google, GET /auth/google/callback (if OAuth env vars set)
-- POST /generate-image  { prompt, animals?, abilities? }
-- GET /pokemons
-- DELETE /pokemons/:id
-- POST /share  { pokemonId }
-- GET /share/:shareId
-
-Run (local)
-1) npm (dev)
-```bash
-cd backend
-npm install
-npm run dev
-
-cd ../frontend
-npm install
-npm run dev
-```
-
-2) Docker Compose (recommended)
-```bash
-# from repository root (ex00/)
-make    # builds and starts containers in background
-make logs
-make down
-```
-
-Environment (optional)
-- GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL
-- SESSION_SECRET (defaults to `dev-secret-key` in docker-compose)
-
-Notes
-- Storage is in-memory — restart clears data.
-- Pollinations.ai is used to produce image URLs; no API key in the code.
-
----
-
-Français — Générateur texte → Pokémon (concis)
-
-But
-- Application minimaliste locale : frontend React (Vite) + backend Express (TypeScript). Le frontend utilise API_BASE = http://localhost:3000.
-
-Faits rapides
-- Frontend dev : `npm run dev` (Vite). Dans Docker le serveur dev écoute 5173 et est publié sur le port hôte 8080.
-- Backend dev : `npm run dev` (ts-node-dev) sur le port 3000.
-- Stockage : en mémoire. Les URLs d'images sont générées via pollinations.ai.
-
-Endpoints clés
-- GET /health
-- GET /options
-- POST /auth/demo  { username }
-- GET /auth/me
-- POST /auth/logout
-- GET /auth/google, GET /auth/google/callback (si variables OAuth configurées)
-- POST /generate-image  { prompt, animals?, abilities? }
-- GET /pokemons
-- DELETE /pokemons/:id
-- POST /share  { pokemonId }
-- GET /share/:shareId
-
-Lancer localement
-1) npm (dev)
-```bash
-cd backend
-npm install
-npm run dev
-
-cd ../frontend
-npm install
-npm run dev
-```
-
-2) Docker Compose (recommandé)
-```bash
-# depuis la racine (ex00/)
-make
-make logs
-make down
-```
-
-Variables d'environnement (optionnel)
-- GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL
-- SESSION_SECRET (par défaut `dev-secret-key` dans docker-compose)
-
-Remarques
-- Stockage en mémoire — redémarrage efface les données.
-- Pollinations.ai est utilisé pour générer les URLs d'images ; aucune clé API dans le code.
 # Text to Pokémon Generator - ex01
 
 Application web minimaliste de génération de Pokémon par IA, suivant strictement les exigences du projet.
@@ -533,6 +19,26 @@ Application web minimaliste de génération de Pokémon par IA, suivant strictem
 - ✅ **Accessibilité WCAG 2.1 AA** (semantic HTML, ARIA, keyboard nav)
 - ✅ **Sécurité** : JWT tokens, HttpOnly cookies, sessions sécurisées
 - ✅ **Backend minimal** pour gérer OAuth2 et API
+
+## 🔒 Sécurité
+
+- ✅ OAuth2 avec Google (authentification sécurisée)
+- ✅ JWT tokens dans cookies HttpOnly
+- ✅ CORS configuré
+- ✅ Sessions sécurisées avec express-session
+- ✅ Variables d'environnement pour secrets
+- ✅ Pas de credentials dans le code
+
+## ♿ Accessibilité (WCAG 2.1 AA)
+
+- ✅ HTML sémantique (`<main>`, `<header>`, `<section>`, `<article>`, `<footer>`)
+- ✅ ARIA labels et rôles
+- ✅ Navigation clavier complète
+- ✅ Focus visible sur tous les éléments interactifs
+- ✅ Alt texts descriptifs sur les images
+- ✅ États de chargement annoncés (aria-busy, role="status")
+- ✅ Messages d'erreur avec role="alert"
+
 
 ### 🎯 Design Inspiré du pokedex de Pokemon Arceus
 Interface simple avec :
@@ -566,149 +72,63 @@ Interface simple avec :
 ```bash
 cd ex01/
 cp .env.example .env
-English — Text-to-Pokémon Generator (concise)
-
-Purpose
-- Minimal local full-stack app: React (Vite) frontend + Express (TypeScript) backend. Frontend uses `API_BASE = http://localhost:3000`.
-
-Quick facts
-- Frontend dev: `npm run dev` (Vite). Inside Docker the dev server listens on 5173 and is published to host 8080.
-- Backend dev: `npm run dev` (ts-node-dev) on port 3000.
-- Storage: in-memory. Image URLs built using pollinations.ai.
-
-Key endpoints
-- GET /health
-- GET /options
-- POST /auth/demo  { username }
-- GET /auth/me
-- POST /auth/logout
-- GET /auth/google, GET /auth/google/callback (if GOOGLE_CLIENT_ID/SECRET set)
-- POST /generate-image  { prompt, animals?, abilities? }
-- GET /pokemons
-- DELETE /pokemons/:id
-- POST /share  { pokemonId }
-- GET /share/:shareId
-
-Run (local)
-1) npm (dev)
-```bash
-cd backend
-npm install
-npm run dev
-
-cd ../frontend
-npm install
-npm run dev
 ```
 
-2) Docker Compose (recommended)
+Éditez `.env` avec vos identifiants :
+```env
+SESSION_SECRET=votre-secret-securise
+GOOGLE_CLIENT_ID=votre-client-id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=votre-client-secret
+GOOGLE_CALLBACK_URL=http://localhost:3000/auth/google/callback
+```
+
+## 📖 Utilisation
+
+### Démarrage Rapide
+
 ```bash
-# from repository root (ex00/)
+# 1. Copier et configurer les variables d'environnement
+cp .env.example .env
+# Éditer .env avec vos credentials Google (si vous voulez OAuth2)
+
+# 2. Démarrer l'application
 make
+
+# 3. Accéder à l'application
+# Frontend: http://localhost:8080
+# Backend: http://localhost:3000
+
+# 4. Voir les logs
 make logs
+
+# 5. Arrêter quand vous avez fini
 make down
 ```
 
-English — Text-to-Pokémon Generator (concise)
+## 📱 Mobile-First
 
-Purpose
-- Minimal local full-stack app: React (Vite) frontend + Express (TypeScript) backend. Frontend uses `API_BASE = http://localhost:3000`.
+- Design responsive avec breakpoints Tailwind
+- Grid adaptatif (1 colonne mobile, 2 colonnes desktop)
+- Touch-friendly buttons et interactions
+- Images optimisées avec lazy loading
 
-Quick facts
-- Frontend dev: `npm run dev` (Vite). Inside Docker the dev server listens on 5173 and is published to host 8080.
-- Backend dev: `npm run dev` (ts-node-dev) on port 3000.
-- Storage: in-memory. Image URLs built using pollinations.ai.
 
-Key endpoints
-- GET /health
-- GET /options
-- POST /auth/demo  { username }
-- GET /auth/me
-- POST /auth/logout
-- GET /auth/google, GET /auth/google/callback (if GOOGLE_CLIENT_ID/SECRET set)
-- POST /generate-image  { prompt, animals?, abilities? }
-- GET /pokemons
-- DELETE /pokemons/:id
-- POST /share  { pokemonId }
-- GET /share/:shareId
+## 👥 Auteur
 
-Run (local)
-1) npm (dev)
-```bash
-cd backend
-npm install
-npm run dev
+Projet réalisé dans le cadre de la Piscine Globant - Project 3 par ampocchi
 
-cd ../frontend
-npm install
-npm run dev
-```
+## 📝 Notes
 
-2) Docker Compose (recommended)
-```bash
-# from repository root (ex00/)
-make
-make logs
-make down
-```
+- **Production** : Changez les URIs OAuth2 pour votre domaine HTTPS
+- **Secrets** : Ne commitez jamais le fichier `.env`
+- **API** : Pollinations.ai est gratuit et ne nécessite pas de clé API
+- **Stockage** : Actuellement en mémoire (se réinitialise au redémarrage)
 
-Environment (optional)
-- GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL
-- SESSION_SECRET (defaults to `dev-secret-key` in docker-compose)
+## 🔗 Ressources
 
-Notes
-- Storage is in-memory — restart clears data.
-- Pollinations.ai used to produce image URLs; no API key required in code.
-
----
-
-Français — Générateur texte → Pokémon (concis)
-
-But
-- Application minimaliste locale : frontend React (Vite) + backend Express (TypeScript). Le frontend utilise `API_BASE = http://localhost:3000`.
-
-Faits rapides
-- Frontend dev : `npm run dev` (Vite). Dans Docker le serveur dev écoute 5173 et est exposé sur le port 8080.
-- Backend dev : `npm run dev` (ts-node-dev) sur le port 3000.
-- Stockage : en mémoire. Les URL d'images sont construites via pollinations.ai.
-
-Endpoints clés
-- GET /health
-- GET /options
-- POST /auth/demo  { username }
-- GET /auth/me
-- POST /auth/logout
-- GET /auth/google, GET /auth/google/callback (si variables OAuth configurées)
-- POST /generate-image  { prompt, animals?, abilities? }
-- GET /pokemons
-- DELETE /pokemons/:id
-- POST /share  { pokemonId }
-- GET /share/:shareId
-
-Lancer localement
-1) npm (dev)
-```bash
-cd backend
-npm install
-npm run dev
-
-cd ../frontend
-npm install
-npm run dev
-```
-
-2) Docker Compose (recommandé)
-```bash
-# depuis la racine (ex00/)
-make
-make logs
-make down
-```
-
-Variables d'environnement (optionnel)
-- GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL
-- SESSION_SECRET (par défaut `dev-secret-key` dans docker-compose)
-
-Remarques
-- Stockage en mémoire — redémarrage efface les données.
-- Pollinations.ai est utilisé pour générer les URLs d'images ; aucune clé API dans le code.
+- [Google OAuth2 Docs](https://developers.google.com/identity/protocols/oauth2)
+- [Pollinations.ai](https://pollinations.ai/)
+- [Text-to-Pokemon Model](https://replicate.com/lambdal/text-to-pokemon)
+- [React Documentation](https://react.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/)
